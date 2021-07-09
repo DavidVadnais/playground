@@ -1,8 +1,9 @@
-#Fortran
+# Fortran
 
-#install compiler
+## Install Compiler
+
 sudo apt install gfortran-9
 
-#Run hello world
+## Run Hello World
 * gfortran -o hello hello.f90
 * ./hello
