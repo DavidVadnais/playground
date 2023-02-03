@@ -1,0 +1,69 @@
+/******************************************************************************
+
+David Vadnais go playground
+
+Following:
+*   https://www.w3schools.com/go/index.php
+
+*******************************************************************************/
+
+package main
+
+import (
+"fmt"
+"time"
+)
+
+//constants of different data types
+const PI float32 = 3.14 
+const DEBUG bool = true
+const RATE_DAVID_OUT_OF_TEN int = 10
+const DAVIDS_NAME = "David"
+
+// main
+func main() {
+    familyName(DAVIDS_NAME)
+    fmt.Println(funcWithRet(RATE_DAVID_OUT_OF_TEN,RATE_DAVID_OUT_OF_TEN))
+    
+    // returns named ret
+    fmt.Println(namedReturnValues(5,2))
+    
+    // multi ret
+    fmt.Println(multiRet(5, "Hello"))
+    a, b := multiRet(5, "Hello")
+    fmt.Println(a, b) 
+    _, c := multiRet(5, "Hello")
+    fmt.Println(c) 
+    
+    //recursion
+    testcount(1)
+}
+
+func testcount(x int) int {
+    if x == 11 {
+        return 0
+    }
+    fmt.Println(x)
+    return testcount(x + 1)
+}
+
+func familyName(fname string) {
+    fmt.Println("Hello", fname)
+} 
+
+func funcWithRet(x int, y int) int {
+  return x + y
+} 
+
+//Named Return Values
+func namedReturnValues(x int, y int) (sr int ){
+    sr = x + y
+    return
+}
+
+// multi return
+func multiRet(x int, y string) (result int, txt1 string) {
+  result = x + x
+  txt1 = y + " World!"
+  return
+} 
