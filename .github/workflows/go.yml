@@ -29,4 +29,9 @@ jobs:
         go build -v conditionsAndLoops.go 
 
     - name: Test
-      run: ./conditionsAndLoops
+      run: |
+        pwd
+        ls
+        cd goPlayground
+        ls 
+        ./conditionsAndLoops
